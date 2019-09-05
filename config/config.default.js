@@ -30,15 +30,15 @@ module.exports = appInfo => {
       // 单数据库信息配置
       client: {
         // host
-        host: 'localhost',
+        host: '47.111.185.131',
         // 端口号
         port: '3306',
         // 用户名
-        user: 'root',
+        user: 'egg_demo',
         // 密码
         password: 'root',
         // 数据库名
-        database: 'egg-demo',
+        database: 'egg_demo',
       },
       // 是否加载到 app 上，默认开启
       app: true,
