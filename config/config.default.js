@@ -50,6 +50,10 @@ module.exports = appInfo => {
         enable: false,
       },
     },
+    cors:{
+      origin:'*',
+      allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+    },
     cluster:{
         listen: {
           port: 7001,
