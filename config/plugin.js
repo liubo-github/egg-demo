@@ -6,6 +6,11 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
+  security:{
+    xframe: {
+      enable: false,
+    }
+  },
   mysql: { 
     enable: true,
     package: 'egg-mysql',

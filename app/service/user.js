@@ -5,6 +5,11 @@ class UserService extends Service {
         const user = await this.app.mysql.query('select * from user where id = ?', uid);
         return user;
     }
+
+    async insert(data){
+        const res = await this.app.mysql.insert('user', data);
+        return res;
+    }
 }
 
 module.exports = UserService;
