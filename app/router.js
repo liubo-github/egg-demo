@@ -10,4 +10,5 @@ module.exports = app => {
   router.post('/picture/getPicDetail', controller.picture.getPicDetail)
   router.post('/user/getUser', controller.user.getUser)
   router.post('/user/createUser', controller.user.createUser)
+  router.get('/download/index', controller.downloadFile.index)
 };

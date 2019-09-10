@@ -16,7 +16,10 @@ class SavedataService extends Service {
             data,
             total:total[0].total,
         }
-        
+    }
+
+    async updateData(data){
+        return res;
     }
     
     async getDetail(query){
