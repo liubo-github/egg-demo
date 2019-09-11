@@ -62,8 +62,8 @@ module.exports = appInfo => {
         }
     },
     static: {
-      prefix: '/public/',
-      dir: ['app/public'],
+      prefix: '/public',
+      dir: 'app/public/',
       dynamic: true,
       preload: false,
       maxAge: 31536000 ,
