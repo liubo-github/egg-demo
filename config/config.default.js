@@ -60,6 +60,14 @@ module.exports = appInfo => {
           hostname: '127.0.0.1',
           // path: '/var/run/egg.sock',
         }
+    },
+    static: {
+      prefix: '/public/',
+      dir: ['app/public'],
+      dynamic: true,
+      preload: false,
+      maxAge: 31536000 ,
+      buffer: true,
     }
   }
 };
