@@ -30,7 +30,7 @@ class IndexController extends Controller {
         });
         this.ctx.body = {
             code: 1,
-            url: `${this.app.config.env !== 'local' ? 'https://egg.liubo.ink/' : 'http://127.0.0.1:7001/'}public/imgs/${key}.jpg`
+            url: `${this.app.config.env !== 'local' ? 'https://egg.liubo.ink/app/' : 'http://127.0.0.1:7001/'}public/imgs/${key}.jpg`
         }
     }
   }
