@@ -10,6 +10,7 @@ class SavedataService extends Service {
         const data = await this.app.mysql.select('pic_data', { // 搜索 post 表
             limit: query.limit, // 返回数据量
             offset: (query.page - 1) * 10, // 数据偏移量
+            orders: [['id','desc']],
         });
         let total = await this.app.mysql.query('select COUNT(*) as total from pic_data');
         return {
