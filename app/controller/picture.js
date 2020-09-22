@@ -7,9 +7,13 @@ class PictureController extends Controller{
             page: 1,
             limit: 10,
         }
-        let params = Object.assign(defaultParams, body)
+        let params = Object.assign(defaultParams, body);
         let res = await this.ctx.service.picData.getData(params)
-        this.ctx.body = res;
+        this.ctx.body = {
+            code: 1, 
+            data: res,
+            message: 'success'
+        };
     }
     
     async getPicDetail(){
@@ -19,7 +23,11 @@ class PictureController extends Controller{
             msg: '参数不合法！'
         }
         let res = await this.ctx.service.picData.getDetail(body);
-        this.ctx.body = res;
+        this.ctx.body = {
+            code: 1,
+            data: res,
+            message: 'success'
+        };
     }
 }
 

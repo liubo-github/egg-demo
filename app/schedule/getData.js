@@ -47,11 +47,11 @@ class getData extends Subscription {
     }
 
     // subscribe 是真正定时任务执行时被运行的函数
-    async subscribe() {
-        let data = await this.getPicData();
-        let res = await this.ctx.service.picData.createData(data);
-        if(res.affectedRows >= 1) console.log(11111)
-    }
+    // async subscribe() {
+    //     let data = await this.getPicData();
+    //     let res = await this.ctx.service.picData.createData(data);
+    //     if(res.affectedRows >= 1) console.log(11111)
+    // }
 }
 
 module.exports = getData;
