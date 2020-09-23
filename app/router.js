@@ -8,7 +8,9 @@ module.exports = app => {
   router.get('/', controller.home.index);
   router.post('/picture/getPicData', controller.picture.getPicData)
   router.post('/picture/getPicDetail', controller.picture.getPicDetail)
-  router.post('/user/getUser', controller.user.getUser)
-  router.post('/user/createUser', controller.user.createUser)
-  router.get('/download/index', controller.downloadFile.index)
+  
+  router.get('/getQiNiuUploadToken', controller.home.getQiNiuUploadToken)
+  router.post('/images/saveImage', controller.image.saveImage)
+  router.post('/images/getImageList', controller.image.getImageList)
+  router.post('/images/getImageDetail', controller.image.getImageDetail)
 };

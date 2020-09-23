@@ -36,5 +36,19 @@ module.exports = {
                 console.log(respBody);
             }
         });
+    },
+
+    getQiNiuUploadToken(){
+        var accessKey = '71gsP6S1pPrRl8ZK-TGiLjlmC_xlNoUGviqMKCgO'
+        var secretKey = 'zjz-qopAdDxWXPCRs5Gr7iVUZ4MOHK_jhJLl9vs6'
+        var mac = new qiniu.auth.digest.Mac(accessKey, secretKey)
+        // 要上传的空间
+        var bucket = 'lb-01'
+        var options = {
+            scope: bucket,
+        }
+        var putPolicy = new qiniu.rs.PutPolicy(options)
+        var uploadToken = putPolicy.uploadToken(mac)
+        return uploadToken
     }
 }
