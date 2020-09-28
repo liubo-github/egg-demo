@@ -6,9 +6,9 @@ class ImageService extends Service {
             limit: query.limit, // 返回数据量
             offset: (query.page - 1) * 10, // 数据偏移量
             orders: [['id','desc']],
-            where: { delete_time: null }
+            where: { isdelete: '<= 0' }
         });
-        let total = await this.app.mysql.query('select COUNT(*) as total from images');
+        let total = await this.app.mysql.query('select COUNT(*) as total from images where isdelete <= 0');
         return {
             data,
             page: query.page,
